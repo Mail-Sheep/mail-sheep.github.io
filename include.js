@@ -13,6 +13,7 @@ function includeHTML() {
 				if (this.readyState == 4) {
 					if (this.status == 200) {
 						elmnt.innerHTML = this.responseText;
+						$('#loadModal').modal('hide');
 					}
 					if (this.status == 404) {
 						elmnt.innerHTML = "Page not found.";
